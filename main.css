@@ -63,7 +63,8 @@ body {
 }
 
 #drag-container p {
-  position: absolute;
+  position: relative;
+  z-index: 2;
   top: 100%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%) rotateX(90deg);
