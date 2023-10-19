@@ -62,17 +62,17 @@ body {
   -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0007);
 }
 
+/* CSS để đảm bảo văn bản "Happy 20.11" luôn ở trên cùng trên màn hình di động */
 #drag-container p {
-  position: relative;
-  z-index: 2;
-  top: 100%;
+  position: absolute;
+  top: 20px; /* Điều chỉnh khoảng cách từ trên xuống */
   left: 50%;
-  -webkit-transform: translate(-50%, -50%) rotateX(90deg);
-  transform: translate(-50%, -50%) rotateX(90deg);
+  transform: translateX(-50%); /* Căn giữa ngang */
+  z-index: 2; /* Đảm bảo văn bản ở trên cùng */
   color: rgb(0, 195, 255);
   animation: fadein ease 15s;
-  text-align: center; /* Căn giữa văn bản */
 }
+
 
 @keyframes fadein {
   from {
