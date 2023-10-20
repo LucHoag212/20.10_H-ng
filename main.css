@@ -65,8 +65,9 @@ body {
 #drag-container p {
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  text-align: center;
   font-size: 50px;
   color: rgb(0, 195, 255);
   animation: fadein ease 15s;
@@ -174,18 +175,8 @@ p {
 @media screen and (max-width: 768px) {
   body {
       font-size: 16px; /* Điều chỉnh font-size cho cả trang */
-      /* Thêm các điều chỉnh khác tùy theo kích thước màn hình nhỏ hơn */
-
-      /* Giới hạn kích thước tối đa của ảnh và video */
-      #drag-container img,
-      #drag-container video {
-        max-width: 80%; /* Thay đổi kích thước tối đa của ảnh */
-        max-height: 80%; /* Thay đổi kích thước tối đa của ảnh */
-      }
-
-      /* Chỉnh kích thước font cho dòng chữ */
-      #drag-container p {
-        font-size: 100px; /* Thay đổi kích thước font của chữ */
-      }
+      /* Thêm điều chỉnh khác tùy theo nhu cầu cho màn hình điện thoại */
   }
+
+  /* Thêm responsive CSS tại đây cho màn hình điện thoại */
 }
