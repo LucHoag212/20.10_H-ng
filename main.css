@@ -66,11 +66,11 @@ body {
   position: absolute;
   top: 0;
   left: 50%;
-  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   font-size: 50px;
   color: rgb(0, 195, 255);
   animation: fadein ease 15s;
+  white-space: nowrap; /* Tránh dòng chữ bị ngắt dòng */
 }
 
 @keyframes fadein {
@@ -90,7 +90,7 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%) rotateX(90deg);
   transform: translate(-50%, -50%) rotateX(90deg);
-  background: -webkit-radial-gradient(center center, farthest-side, #9993, transparent);
+  background: -webkit-radial-gradient(center center, farthest-side, #9993, transparent;
 }
 
 #music-container {
@@ -185,7 +185,7 @@ p {
 
       /* Chỉnh kích thước font cho dòng chữ */
       #drag-container p {
-        font-size: 50px; /* Thay đổi kích thước font của chữ */
+        font-size: 100px; /* Thay đổi kích thước font của chữ */
       }
   }
 }
