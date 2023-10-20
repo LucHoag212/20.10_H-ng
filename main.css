@@ -2,7 +2,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html,
@@ -64,14 +63,12 @@ body {
 
 #drag-container p {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  font-size: 50px;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotateX(90deg);
+  transform: translate(-50%, -50%) rotateX(90deg);
   color: rgb(0, 195, 255);
   animation: fadein ease 15s;
-  white-space: nowrap; /* Tránh dòng chữ bị ngắt dòng */
 }
 
 @keyframes fadein {
@@ -160,8 +157,8 @@ body {
 
 #canva {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 0px;
+  right: 0px;
   overflow: hidden;
 }
 
@@ -171,12 +168,38 @@ p {
   font-size: 4vw;
 }
 
-/* CSS cho màn hình có kích thước nhỏ hơn 768px (điện thoại) */
+/* CSS cho màn hình có kích thước nhỏ hơn 768px */
 @media screen and (max-width: 768px) {
   body {
-      font-size: 16px; /* Điều chỉnh font-size cho cả trang */
-      /* Thêm điều chỉnh khác tùy theo nhu cầu cho màn hình điện thoại */
+      font-size: 16px; /* Điều chỉnh font-size hoặc các thuộc tính khác tùy theo nhu cầu */
+      /* Thêm các điều chỉnh khác tùy theo kích thước màn hình nhỏ hơn */
+  }
+}
+
+/* CSS cho màn hình có kích thước lớn hơn 1200px */
+@media screen and (min-width: 1200px) {
+  body {
+      font-size: 24px; /* Điều chỉnh font-size hoặc các thuộc tính khác tùy theo nhu cầu */
+      /* Thêm các điều chỉnh khác tùy theo kích thước màn hình lớn hơn */
+  }
+}
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply a base font size for better scalability */
+html {
+  font-size: 16px;
+}
+
+/* Media query for screens smaller than 768px (typical mobile devices) */
+@media screen and (max-width: 768px) {
+  body {
+      font-size: 14px; /* Reduce the font size for smaller screens */
   }
 
-  /* Thêm responsive CSS tại đây cho màn hình điện thoại */
+  /* You can add more responsive CSS rules here */
 }
