@@ -62,19 +62,16 @@ body {
   -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0007);
 }
 
-/* CSS để đảm bảo dòng chữ "Happy 20.11" không xoay theo ảnh */
 #drag-container p {
   position: absolute;
-  top: 20px; /* Điều chỉnh khoảng cách từ trên xuống */
+  top: 0;
   left: 50%;
-  transform: translateX(-50%); /* Căn giữa ngang */
-  z-index: 2; /* Đảm bảo văn bản ở trên cùng */
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  font-size: 50px;
   color: rgb(0, 195, 255);
   animation: fadein ease 15s;
-  transform-style: flat; /* Ngăn chặn xoay theo ảnh */
 }
-
-
 
 @keyframes fadein {
   from {
@@ -162,8 +159,8 @@ body {
 
 #canva {
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
   overflow: hidden;
 }
 
@@ -173,18 +170,22 @@ p {
   font-size: 4vw;
 }
 
-/* CSS cho màn hình có kích thước nhỏ hơn 768px */
+/* CSS cho màn hình có kích thước nhỏ hơn 768px (điện thoại) */
 @media screen and (max-width: 768px) {
   body {
-      font-size: 16px; /* Điều chỉnh font-size hoặc các thuộc tính khác tùy theo nhu cầu */
+      font-size: 16px; /* Điều chỉnh font-size cho cả trang */
       /* Thêm các điều chỉnh khác tùy theo kích thước màn hình nhỏ hơn */
-  }
-}
 
-/* CSS cho màn hình có kích thước lớn hơn 1200px */
-@media screen and (min-width: 1200px) {
-  body {
-      font-size: 24px; /* Điều chỉnh font-size hoặc các thuộc tính khác tùy theo nhu cầu */
-      /* Thêm các điều chỉnh khác tùy theo kích thước màn hình lớn hơn */
+      /* Giới hạn kích thước tối đa của ảnh và video */
+      #drag-container img,
+      #drag-container video {
+        max-width: 80%; /* Thay đổi kích thước tối đa của ảnh */
+        max-height: 80%; /* Thay đổi kích thước tối đa của ảnh */
+      }
+
+      /* Chỉnh kích thước font cho dòng chữ */
+      #drag-container p {
+        font-size: 50px; /* Thay đổi kích thước font của chữ */
+      }
   }
 }
